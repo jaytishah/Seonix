@@ -1,0 +1,349 @@
+@import "tailwindcss";
+
+/* ✅ CRITICAL: Define custom dark variant for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Alternative syntax (both work the same) */
+/* @variant dark (&:where(.dark, .dark *)); */
+
+/* Root theme setup */
+:root {
+  color-scheme: light;
+}
+
+/* Dark mode root */
+:root.dark {
+  color-scheme: dark;
+}
+
+/* Smooth transitions */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ========================================
+   TAILWIND V4 THEME CONFIGURATION
+   ======================================== */
+
+@theme {
+  /* Enable color scheme support */
+  --color-scheme: light dark;
+  
+  /* Custom Colors */
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-200: #ddd6fe;
+  --color-primary-300: #c4b5fd;
+  --color-primary-400: #a78bfa;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-primary-800: #5b21b6;
+  --color-primary-900: #4c1d95;
+  --color-primary-950: #2e1065;
+
+  --color-secondary-50: #fdf4ff;
+  --color-secondary-100: #fae8ff;
+  --color-secondary-200: #f5d0fe;
+  --color-secondary-300: #f0abfc;
+  --color-secondary-400: #e879f9;
+  --color-secondary-500: #d946ef;
+  --color-secondary-600: #c026d3;
+  --color-secondary-700: #a21caf;
+  --color-secondary-800: #86198f;
+  --color-secondary-900: #701a75;
+
+  /* Dark Theme Colors */
+  --color-dark-bg: #0f172a;
+  --color-dark-card: #1e293b;
+  --color-dark-hover: #334155;
+  --color-dark-border: #475569;
+
+  /* Light Theme Colors */
+  --color-light-bg: #f8fafc;
+  --color-light-card: #ffffff;
+  --color-light-hover: #f1f5f9;
+  --color-light-border: #e2e8f0;
+
+  /* Custom Animations */
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-slide-up: slideUp 0.5s ease-out;
+  --animate-slide-down: slideDown 0.5s ease-out;
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-scale-in: scaleIn 0.3s ease-out;
+
+  /* Custom Box Shadows */
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+  --shadow-glow-lg: 0 0 40px rgba(139, 92, 246, 0.4);
+  --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Poppins', sans-serif;
+}
+
+/* ========================================
+   ANIMATIONS KEYFRAMES
+   ======================================== */
+
+@keyframes gradient {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+* {
+  @apply border-gray-200 dark:border-dark-border;
+}
+
+body {
+  @apply bg-light-bg dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-dark-card;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Security Features */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.no-context-menu {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.no-copy {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ========================================
+   COMPONENT CLASSES
+   ======================================== */
+
+/* Card Component */
+.card {
+  @apply bg-light-card dark:bg-dark-card rounded-xl shadow-lg border border-light-border dark:border-dark-border transition-all duration-300;
+}
+
+.card-hover {
+  @apply hover:shadow-xl hover:scale-[1.02] hover:border-primary-400 dark:hover:border-primary-600;
+}
+
+/* Button Components */
+.btn {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 focus:ring-primary-500 shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 focus:ring-gray-500;
+}
+
+.btn-outline {
+  @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-950 focus:ring-primary-500;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-lg;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500 shadow-lg;
+}
+
+/* Input Components */
+.input {
+  @apply w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-card border border-gray-300 dark:border-dark-border text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300;
+}
+
+.input-error {
+  @apply border-red-500 focus:ring-red-500;
+}
+
+/* Badge Components */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100;
+}
+
+.badge-danger {
+  @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100;
+}
+
+.badge-primary {
+  @apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100;
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-600 bg-clip-text text-transparent;
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+/* Glass Effect */
+.glass {
+  @apply bg-white/10 dark:bg-black/10 backdrop-blur-lg border border-white/20 dark:border-white/10;
+}
+
+/* Loading Spinner */
+.spinner {
+  @apply animate-spin rounded-full border-4 border-gray-200 border-t-primary-600;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========================================
+   EXAM MODE STYLES
+   ======================================== */
+
+body.exam-mode {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.fullscreen-element {
+  @apply w-screen h-screen overflow-auto;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
