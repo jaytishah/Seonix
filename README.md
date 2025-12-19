@@ -7,57 +7,18 @@
   <img src="https://img.shields.io/badge/Express-4.21.2-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
 </div>
 
-## 📋 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-- [Project Structure](#project-structure)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## 🎯 About
 
-**Seonix** is a comprehensive AI-powered proctored examination system designed to conduct secure online exams with real-time monitoring and intelligent proctoring capabilities. The platform provides a complete solution for educational institutions and organizations to conduct fair and secure online assessments.
+**Seonix** is an AI-powered proctored examination system for conducting secure online exams with real-time monitoring. Features include webcam monitoring, tab switch detection, fullscreen enforcement, instant results, and comprehensive analytics for both students and teachers.
 
-The system features:
-- **Secure Exam Environment**: Prevents cheating through tab switching detection, fullscreen enforcement, and copy-paste restrictions
-- **AI-Powered Proctoring**: Real-time monitoring with webcam integration and suspicious activity detection
-- **Instant Results**: Automated grading and immediate score calculation
-- **User-Friendly Interface**: Intuitive dashboards for both students and teachers
-- **Comprehensive Analytics**: Detailed violation logs and performance tracking
+## ✨ Key Features
 
-## ✨ Features
-
-### For Students
-- 📝 **Browse Available Exams**: View all upcoming and active exams
-- ⏱️ **Timed Examinations**: Take exams with countdown timers
-- 📸 **Webcam Monitoring**: Real-time proctoring during exams
-- 🚫 **Cheat Prevention**: Tab switch detection, fullscreen mode enforcement
-- 📊 **Instant Results**: View scores and performance immediately after submission
-- 📈 **Performance Dashboard**: Track exam history and average scores
-
-### For Teachers
-- 📋 **Create Exams**: Set up comprehensive exams with custom settings
-- ❓ **Question Management**: Add, edit, and manage multiple-choice questions
-- ⚙️ **Exam Configuration**: Set duration, passing marks, start/end times
-- 👥 **Student Monitoring**: Real-time proctoring logs and violation tracking
-- 📊 **Results Analytics**: View detailed exam results and statistics
-- 🚩 **Flagged Students**: Identify high-risk students based on violation counts
-
-### Security Features
-- 🔒 **JWT Authentication**: Secure token-based authentication
-- 🔐 **Role-Based Access Control**: Separate permissions for students and teachers
-- 👁️ **Tab Switch Detection**: Monitors and logs when students leave the exam tab
-- 🖥️ **Fullscreen Enforcement**: Requires fullscreen mode during exams
-- 📹 **Webcam Monitoring**: Optional webcam capture for enhanced security
-- ⌨️ **Copy-Paste Prevention**: Blocks clipboard operations during exams
+- 📝 Create and manage exams with custom settings
+- ⏱️ Timed examinations with multiple-choice questions
+- 📸 Real-time webcam proctoring and violation tracking
+- 🚫 Cheat prevention (tab switching, fullscreen enforcement, copy-paste blocking)
+- 📊 Instant results and performance analytics
+- 🔒 JWT authentication with role-based access control
 
 ## 📸 Screenshots
 
@@ -81,31 +42,14 @@ The system features:
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React 18.3.1** - UI library
-- **Redux Toolkit** - State management
-- **React Router DOM** - Navigation
-- **Axios** - HTTP client
-- **Vite** - Build tool and dev server
-- **CSS3** - Styling
-
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js 4.21.2** - Web framework
-- **MongoDB** - NoSQL database
-- **Mongoose 8.8.4** - ODM for MongoDB
-- **JWT** - Authentication
-- **Bcrypt** - Password hashing
-- **CORS** - Cross-origin resource sharing
+**Frontend:** React 18, Redux Toolkit, React Router, Axios, Vite  
+**Backend:** Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt
 
 ## 📋 Prerequisites
 
-Before you begin, ensure you have the following installed:
-
-- **Node.js** (v18.0.0 or higher) - [Download](https://nodejs.org/)
-- **MongoDB** (v6.0 or higher) - [Download](https://www.mongodb.com/try/download/community)
-- **npm** or **yarn** - Package manager (comes with Node.js)
-- **Git** - Version control
+- Node.js (v18.0.0+)
+- MongoDB (v6.0+)
+- npm or yarn
 
 ## 🚀 Installation
 
@@ -480,11 +424,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - MongoDB for the robust database solution
 - All contributors who help improve this project
 
-## 📞 Support
 
-For support, email jaytishah20@gmail.com or create an issue in the GitHub repository.
-
----
 
 <div align="center">
   Made with ❤️ by Jayti Shah
