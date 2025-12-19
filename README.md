@@ -61,43 +61,23 @@ The system features:
 
 ## 📸 Screenshots
 
-### Student Portal
+![Screenshot 1](screenshots/Screenshot%20(49).png)
 
-#### Dashboard
-![Student Dashboard](screenshots/student-dashboard.png)
-*Student dashboard showing available exams, completed exams, and average score*
+![Screenshot 2](screenshots/Screenshot%20(50).png)
 
-#### Available Exams
-![Available Exams](screenshots/available-exams.png)
-*Browse and take available examinations*
+![Screenshot 3](screenshots/Screenshot%20(51).png)
 
-#### Exam Results
-![My Results](screenshots/student-results.png)
-*View detailed exam results and performance history*
+![Screenshot 4](screenshots/Screenshot%20(52).png)
 
-### Teacher Portal
+![Screenshot 5](screenshots/Screenshot%20(53).png)
 
-#### Teacher Dashboard
-![Teacher Dashboard](screenshots/teacher-dashboard.png)
-*Comprehensive dashboard with exam statistics and flagged students*
+![Screenshot 6](screenshots/Screenshot%20(54).png)
 
-#### Create Exam
-![Create Exam](screenshots/create-exam.png)
-*Set up new examinations with custom configurations*
+![Screenshot 7](screenshots/Screenshot%20(55).png)
 
-#### Manage Questions
-![Manage Questions](screenshots/manage-questions.png)
-*Add and manage exam questions with multiple-choice options*
+![Screenshot 8](screenshots/Screenshot%20(57).png)
 
-#### My Exams
-![My Exams](screenshots/teacher-exams.png)
-*View and manage all created examinations*
-
-### Authentication
-
-#### Login Page
-![Login](screenshots/login.png)
-*Secure login interface for students and teachers*
+![Screenshot 9](screenshots/student-dashboard.png)
 
 ## 🛠️ Tech Stack
 
